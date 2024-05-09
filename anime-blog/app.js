@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
+app.use(express.static('public'));  // Added to start the index.html for as a main page
+
+app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });
 
